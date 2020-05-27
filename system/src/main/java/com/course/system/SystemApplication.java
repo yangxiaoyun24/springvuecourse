@@ -13,7 +13,6 @@ public class SystemApplication {
 
 	private static final Logger LOG = LoggerFactory.getLogger(SystemApplication.class);
 
-
 	public static void main(String[] args){
 		SpringApplication app = new SpringApplication(SystemApplication.class);
 		Environment env = app.run(args).getEnvironment();
