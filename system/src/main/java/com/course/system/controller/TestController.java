@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
 
+    @Resource
+    private TestService testService;
+
+
     @RequestMapping("/test")
     public String test(){
         return "success";
