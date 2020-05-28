@@ -45,6 +45,11 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.imooc</groupId>
+            <artifactId>server</artifactId>
+        </dependency>
+
     </dependencies>
 
 
