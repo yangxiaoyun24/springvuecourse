@@ -42,7 +42,7 @@
                              type="XMLMAPPER" />
 
         <!--<table tableName="test" domainObjectName="Test"/>-->
-        <table tableName="chapter" domainObjectName="chapter"/>
+        <table tableName="chapter" domainObjectName="Chapter"/>
 
 
     </context>
