@@ -24,11 +24,11 @@ export default new Router({
       component:Admin,
       children:[{
         path:"welcome",
-        name:"admin",
+        name:"welcome",
         component:Welcome
       },{
         path:"business/chapter",
-        name:"admin",
+        name:"business/chapter",
         component:Chapter
       }]
     }]
