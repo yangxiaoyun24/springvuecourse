@@ -12,6 +12,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -23,8 +24,8 @@ public class ChapterService {
     @Resource
     private ChapterMapper chapterMapper;
 
-    public void list(PageDto pageDto){
 
+    public void list(PageDto pageDto){
         PageHelper.startPage(pageDto.getPage(),pageDto.getSize());
         ChapterExample chapterExample = new ChapterExample();
         List<Chapter> chapterList = chapterMapper.selectByExample(chapterExample);
@@ -59,5 +60,10 @@ public class ChapterService {
 
     private void update(Chapter chapter) {
         chapterMapper.updateByPrimaryKey(chapter);
+    }
+
+
+    public void delete(String id) {
+        chapterMapper.deleteByPrimaryKey(id);
     }
 }
