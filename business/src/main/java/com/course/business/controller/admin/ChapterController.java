@@ -15,6 +15,7 @@ import javax.annotation.Resource;
 public class ChapterController {
 
     private static final Logger Log = LoggerFactory.getLogger(ChapterController.class);
+    public static final String BUSINESS_NAME = "大章";
 
 
     @Resource
