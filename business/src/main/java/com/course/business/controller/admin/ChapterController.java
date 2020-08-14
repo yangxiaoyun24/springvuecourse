@@ -22,19 +22,26 @@ public class ChapterController {
     private ChapterService chapterService;
 
 
+    /**
+     * 列表查询
+     * @param pageDto
+     * @return
+     */
     @PostMapping("/list")
     public ResponseDto list(@RequestBody PageDto pageDto){
-        Log.info("pageDto：" + pageDto);
         ResponseDto responseDto = new ResponseDto();
         chapterService.list(pageDto);
         responseDto.setContent(pageDto);
         return responseDto;
     }
 
+    /**
+     * 保存，id有值时更新，无值时新增
+     * @param chapterDto
+     * @return
+     */
     @PostMapping("/save")
     public ResponseDto save(@RequestBody ChapterDto chapterDto){
-        Log.info("chapterDto：" + chapterDto);
-
         //保存校验
         ValidatorUtil.require(chapterDto.getName(),"名称");
         ValidatorUtil.require(chapterDto.getCourseId(),"课程ID");
@@ -47,9 +54,13 @@ public class ChapterController {
     }
 
 
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
     @DeleteMapping("/delete/{id}")
     public ResponseDto delete(@PathVariable String id){
-        Log.info("id：{}" + id);
         ResponseDto responseDto = new ResponseDto();
         chapterService.delete(id);
         return responseDto;
