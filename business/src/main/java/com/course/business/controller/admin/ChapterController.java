@@ -24,6 +24,7 @@ public class ChapterController {
 
 
     @PostMapping("/list")
+//    @RequestMapping("/list")
     public ResponseDto list(@RequestBody PageDto pageDto){
         Log.info("pageDto：" + pageDto);
         ResponseDto responseDto = new ResponseDto();
@@ -42,7 +43,7 @@ public class ChapterController {
     }
 
 
-    @RequestMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseDto delete(@PathVariable String id){
         Log.info("id：{}" + id);
         ResponseDto responseDto = new ResponseDto();
