@@ -192,7 +192,7 @@
           if(resp.success){
             $("#form-modal").modal("hide");
             _this.list(1);
-            Toast.success("保存成功！")
+            Toast.success("保存成功！");
           }else {
             Toast.warning(resp.message)
           }
@@ -212,7 +212,7 @@
             let resp = response.data;
             if(resp.success){
               _this.list(1);
-              Toast.success("删除成功！")
+              Toast.success("删除成功！");
             }
           })
         });
