@@ -1,4 +1,4 @@
-package com.course.business.controller.admin;
+package com.course.${module}.controller.admin;
 
 import com.course.server.dto.${Domain}Dto;
 import com.course.server.dto.PageDto;
@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 public class ${Domain}Controller {
 
     private static final Logger Log = LoggerFactory.getLogger(${Domain}Controller.class);
-    public static final String BUSINESS_NAME = "大章";
+    public static final String BUSINESS_NAME = "${tableNameCn}";
 
 
     @Resource
