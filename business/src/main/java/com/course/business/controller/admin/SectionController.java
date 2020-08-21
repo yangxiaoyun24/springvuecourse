@@ -14,7 +14,7 @@ import javax.annotation.Resource;
 @RequestMapping("/admin/section")
 public class SectionController {
 
-    private static final Logger Log = LoggerFactory.getLogger(SectionController.class);
+    private static final Logger LOG = LoggerFactory.getLogger(SectionController.class);
     public static final String BUSINESS_NAME = "小节";
 
 
@@ -43,6 +43,9 @@ public class SectionController {
     @PostMapping("/save")
     public ResponseDto save(@RequestBody SectionDto sectionDto){
         //保存校验
+        ValidatorUtil.require(sectionDto.getTitle(),"标题");
+        ValidatorUtil.length(sectionDto.getTitle(),"标题",1,50);
+        ValidatorUtil.length(sectionDto.getVideo(),"视频",1,200);
 
         ResponseDto responseDto = new ResponseDto();
         sectionService.save(sectionDto);
