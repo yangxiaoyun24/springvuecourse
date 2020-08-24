@@ -7,7 +7,6 @@ package com.course.generator.util;
  */
 public class Field {
 
-
     private String name;     //字段名：course_id
     private String nameHump; //字段名小驼峰：courseId
     private String nameBigHump; //字段名大驼峰：CourseId
@@ -17,6 +16,9 @@ public class Field {
     private String comment;  //注释：课程/ID
     private Boolean nullAble; //是否可为空
     private Integer length; //字符串长度
+    private Boolean enums; //是否枚举
+    private String enumsConst; //枚举常量COURSE_LEVEL
+
 
     public String getName() {
         return name;
@@ -90,6 +92,22 @@ public class Field {
         this.length = length;
     }
 
+    public Boolean getEnums() {
+        return enums;
+    }
+
+    public void setEnums(Boolean enums) {
+        this.enums = enums;
+    }
+
+    public String getEnumsConst() {
+        return enumsConst;
+    }
+
+    public void setEnumsConst(String enumsConst) {
+        this.enumsConst = enumsConst;
+    }
+
     @Override
     public String toString() {
         return "Field{" +
@@ -102,7 +120,11 @@ public class Field {
                 ", comment='" + comment + '\'' +
                 ", nullAble=" + nullAble +
                 ", length=" + length +
+                ", enums=" + enums +
+                ", enumsConst='" + enumsConst + '\'' +
                 '}';
     }
+
+
 
 }
