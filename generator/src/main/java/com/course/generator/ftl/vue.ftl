@@ -164,7 +164,7 @@
        * 点击【保存】
        * @param page
        */
-      save(page){
+      save(){
         let _this = this;
 
         //保存校验
