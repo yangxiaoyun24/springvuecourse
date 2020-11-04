@@ -11,6 +11,7 @@ import Teacher from "./views/admin/teacher.vue"
 
 
 
+
 Vue.use(Router);
 
 export default new Router({
