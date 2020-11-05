@@ -18,7 +18,6 @@ public class UploadController {
 
     private static final Logger Log = LoggerFactory.getLogger(UploadController.class);
 
-    public static final String BUSINESS_NAME = "文件上传";
 
     @RequestMapping("/upload")
     public ResponseDto upload(@RequestParam MultipartFile file) throws IOException {
@@ -29,7 +28,7 @@ public class UploadController {
         //保存文件到本地
         String fileName = file.getOriginalFilename();
         String key = UuidUtil.getShortUuid();
-        String fullPath = "D:/Git/ZiroomCode/imooc/file/teacher/" + key + "-" + fileName;
+        String fullPath = "D:/Git/ZiroomCode/imooc/file/course/teacher/" + key + "-" + fileName;
         File dest = new File(fullPath);
         file.transferTo(dest);
         Log.info(dest.getAbsolutePath());
